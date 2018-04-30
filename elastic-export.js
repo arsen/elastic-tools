@@ -21,7 +21,7 @@ args
     'Output filename to save the result',
     defaultFilename
   )
-  .option('-L, --limit <limit>', 'Limit number of documents', parseInt, 50)
+  .option('-L, --limit <limit>', 'Limit number of documents', 50)
   .parse(process.argv);
 
 if (!args.host) {
