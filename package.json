@@ -1,0 +1,32 @@
+{
+  "name": "elastic-dump",
+  "version": "1.0.0",
+  "description": "CLI Utility to dump elasticsearch index as JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsen/elastic-dump.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "dump",
+    "export",
+    "json"
+  ],
+  "author": "= <=>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arsen/elastic-dump/issues"
+  },
+  "bin": {
+    "image-optimize": "./elastic-dump.js"
+  },
+  "homepage": "https://github.com/arsen/elastic-dump#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "elasticsearch": "^14.2.2"
+  }
+}
