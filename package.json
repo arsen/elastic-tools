@@ -1,7 +1,7 @@
 {
-  "name": "elastic-dump",
+  "name": "elastic-tools",
   "version": "1.0.0",
-  "description": "CLI Utility to dump elasticsearch index as JSON",
+  "description": "CLI Utilities to export/import JSON from elasticsearch",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,7 @@
     "url": "https://github.com/arsen/elastic-dump/issues"
   },
   "bin": {
-    "image-optimize": "./elastic-dump.js"
+    "elastic-dump": "./elastic-dump.js"
   },
   "homepage": "https://github.com/arsen/elastic-dump#readme",
   "dependencies": {

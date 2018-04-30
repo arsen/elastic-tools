@@ -1,2 +1,2 @@
-# elastic-dump
-CLI Utility to dump elasticsearch index as JSON
+# elastic-tools
+CLI Utilities to export/import JSON from elasticsearch
