@@ -4,8 +4,13 @@ const fs = require('fs');
 const args = require('commander');
 const elasticsearch = require('elasticsearch');
 
-const getFileName = indexName => {
-  return './elastic-export-'+indexName+'.json';
+let defaultFilename = './elastic-export-index.json';
+
+const getFileName = (indexName, out) => {
+  if (out === defaultFilename){
+    return './elastic-export-'+indexName+'.json';
+  }
+  return out;
 };
 
 args
@@ -14,7 +19,7 @@ args
   .option(
     '-O, --out <file>',
     'Output filename to save the result',
-    './elastic-export-index.json'
+    defaultFilename
   )
   .option('-L, --limit <limit>', 'Limit number of documents', parseInt, 50)
   .parse(process.argv);
@@ -45,7 +50,7 @@ result
     let data = resp.hits.hits.map(item =>
       Object.assign({}, { _id: item._id }, item._source)
     );
-    let fileName = getFileName(args.index);
+    let fileName = getFileName(args.index, args.out);
     console.log(`Exported ${data.length} documents (${fileName})`);
     fs.writeFileSync(fileName, JSON.stringify(data, null, 4));
     // console.log(data);
