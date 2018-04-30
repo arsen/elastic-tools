@@ -22,7 +22,8 @@
     "url": "https://github.com/arsen/elastic-dump/issues"
   },
   "bin": {
-    "elastic-export": "./elastic-export.js"
+    "elastic-export": "./elastic-export.js",
+    "elastic-import": "./elastic-import.js"
   },
   "homepage": "https://github.com/arsen/elastic-dump#readme",
   "dependencies": {
