@@ -1,6 +1,6 @@
 {
   "name": "elastic-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI Utilities to export/import JSON from elasticsearch",
   "main": "index.js",
   "scripts": {
